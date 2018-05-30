@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleApplication1;
-using Moq;
+//using Moq;
 
 namespace Test
 {
@@ -57,15 +57,15 @@ namespace Test
         [TestMethod]
         public void TestCountMoney()
         {
-            Wallet wal = new Wallet();
-            Assert.AreEqual(0, wal.CountMoney("RUB"));
+            Wallet wall = new Wallet();
+            Assert.AreEqual(0, wall.CountMoney("RUB"));
         }
 
         [TestMethod]
         public void TestCountCurrency()
         {
-            Wallet wal = new Wallet();
-            Assert.AreEqual(0, wal.CountMoney("RUB"));
+            Wallet wall = new Wallet();
+            Assert.AreEqual(0, wall.CountMoney("RUB"));
         }                                                                                      
     }
 }
