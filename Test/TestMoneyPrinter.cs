@@ -21,8 +21,8 @@ namespace Test
             using (StringWriter sw = new StringWriter())
             {
                 Console.SetOut(sw);
-                printer.print("Внесение", "RUB", 300);
-                Assert.AreEqual<string>("Внесение RUB 300", sw.ToString());
+                printer.print("Внесение", "RUB", 200);
+                Assert.AreEqual<string>("Внесение RUB 200", sw.ToString());
             }
         }
     }
