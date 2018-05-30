@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class MoneyPrinter
+    public class MoneyPrinter
     {
+        public virtual void print(string operation, string currency, int money)
+        {
+            Console.Write(operation + " " + currency + " " + money);
+        }
     }
 }
