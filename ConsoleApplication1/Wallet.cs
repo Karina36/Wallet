@@ -9,7 +9,7 @@ namespace ConsoleApplication1
     public class Wallet
     {
         private Dictionary<string, int> wallet = new Dictionary<string, int>();
-        private Bank bank;
+        private Bank bank = new Bank();
         private MoneyPrinter printer = new MoneyPrinter();
 
         public Wallet() { }
@@ -44,17 +44,24 @@ namespace ConsoleApplication1
             else throw new ArgumentException();
         }
 
-        public int CountCurrency()
+        public int getCurrency()
         {
             return wallet.Keys.Count;
         }
 
-        public int CountMoney(string currency)
+        public int getMoney(string currency)
         {
             if (wallet.Keys.Contains(currency))
                 return wallet[currency];
             else return 0;
         }
-
+        public string toString()
+        {
+            return "{ " + String.Join(", ", wallet.Select(x => x.Value + " " + x.Key)) + " }";
+        }
+        public int getTotalMoney(string currency)
+        {
+            return wallet.Sum(x => bank.convert(x.Value, x.Key, currency));
+        }
     }
 }
