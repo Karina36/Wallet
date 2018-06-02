@@ -10,9 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Wallet wal = new Wallet();
-            wal.addMoney("RUB", 500);
-            Console.WriteLine(wal.getCurrency());
+            
         }
     }
 }

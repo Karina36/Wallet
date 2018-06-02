@@ -85,7 +85,7 @@ namespace Test
         [TestMethod]
         public void TestGetTotalMoney()
         {
-            wal.addMoney("RUB", 100);
+            wal.addMoney("RUB", 150);
             wal.addMoney("EURO", 300);
             Assert.AreEqual(4, wal.getTotalMoney("RUB"));
         }
